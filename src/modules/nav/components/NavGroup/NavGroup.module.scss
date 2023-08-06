@@ -2,6 +2,7 @@
   position: relative;
 
   summary {
+    @include flex-align(center);
     font-size: 14px;
     font-weight: 500;
 
@@ -15,6 +16,10 @@
   &[open] summary {
     color: var(--primary);
     transition: color .5s ease-in-out;
+
+    img {
+      transform: rotate(180deg);
+    }
   }
 }
 

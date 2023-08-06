@@ -97,8 +97,8 @@
   }
 
   &-iconContainer {
-      @include flex-align(center);
-      gap: 4px;
+    @include flex-align(center);
+    gap: 4px;
   }
 
   &-map {
@@ -107,5 +107,11 @@
     height: 300px;
     grid-column: 2/3;
     filter: brightness(0.7);
+    transition: .5s ease-in-out filter;
+
+    &:hover {
+      filter: brightness(1);
+      transition: .5s ease-in-out filter;
+    }
   }
 }
