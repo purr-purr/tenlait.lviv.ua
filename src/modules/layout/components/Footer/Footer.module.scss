@@ -1,0 +1,21 @@
+.container {
+  flex-shrink: 0;
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: calc((100% - 100vw) / 2);
+    top: 0;
+    width: calc(100vw);
+    height: 1px;
+    background-color: #fff;
+  }
+
+  p {
+    font-size: 12px;
+    margin-top: 24px;
+  }
+}
