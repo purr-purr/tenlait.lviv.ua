@@ -8,13 +8,7 @@ module.exports = {
 	semi: true,
 	importOrder: [
 		'^react',
-		'^styled-components',
 		'^next',
-		'',
-		'^@core/(.*)$',
-		'^@server/(.*)$',
-		'',
-		'^@ui/(.*)$',
 		'',
 		'<THIRD_PARTY_MODULES>',
 		'',

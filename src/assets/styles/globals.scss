@@ -1,9 +1,8 @@
-$mobile-bp: 1024px;
+@import "mixins";
 
 :root {
-  --main-bg: #222;
-  --main-white: #fff;
-  --secondary-white: #F8F8F8;
+  --dark: #222;
+  --white: #F8F8F8;
   --primary: #7E83FC;
 }
 
@@ -23,7 +22,7 @@ $mobile-bp: 1024px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--main-bg);
+    background-color: var(--dark);
     border-radius: 50px;
   }
 
@@ -41,13 +40,16 @@ html {
 html,
 body {
   height: 100%;
-  background-color: var(--main-bg);
+  background-color: var(--dark);
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  color: var(--secondary-white);
+  color: var(--white);
   scroll-behavior: smooth;
+}
+
+body, button {
+  font-family: 'Inter', sans-serif;
 }
 
 a {
@@ -56,30 +58,37 @@ a {
 
   &:hover {
     color: var(--primary);
-    transition: color .5s ease-in-out;
+    transition: color .3s ease-in-out;
   }
 }
 
 button {
-  font-family: 'Inter', sans-serif;
   cursor: pointer;
 }
 
-p {
+p, a {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.2;
 
-  @media (max-width: $mobile-bp) {
+  @include media-mobile {
     font-size: 12px;
   }
 }
 
-details > summary {
-  list-style: none;
-}
+.text-content {
+  margin-bottom: 150px;
 
-details > summary::marker,
-details > summary::-webkit-details-marker {
-  display: none;
+  @include media-mobile {
+    margin-bottom: 50px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+  }
 }

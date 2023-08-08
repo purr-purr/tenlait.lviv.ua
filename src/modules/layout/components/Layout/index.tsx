@@ -1,24 +1,21 @@
-import { type ReactNode } from 'react';
+import { FC, type ReactNode } from 'react';
 
+import Meta from '@modules/common/components/Meta';
 import Footer from '@modules/layout/components/Footer';
 import Header from '@modules/layout/components/Header';
-import { HeaderContextWrapper } from '@modules/layout/context/HeaderContext';
 
 import s from './Layout.module.scss';
 
-interface IChildrenProps {
-	children: ReactNode;
-}
-
-const Layout = ({ children }: IChildrenProps) => {
+const Layout: FC<{ children: ReactNode }> = ({ children }) => {
 	return (
-		<main className={s.container}>
-			<HeaderContextWrapper>
+		<>
+			<Meta />
+			<main className={s.container}>
 				<Header />
-			</HeaderContextWrapper>
-			<section className={s.content}>{children}</section>
-			<Footer />
-		</main>
+				<section className={s.content}>{children}</section>
+				<Footer />
+			</main>
+		</>
 	);
 };
 

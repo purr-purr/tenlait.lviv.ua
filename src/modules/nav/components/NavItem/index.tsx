@@ -8,19 +8,23 @@ import s from './NavItem.module.scss';
 interface INavPageItemProps {
 	title: string;
 	path: string;
+	onClick: () => void;
 }
 
-const NavItem: FC<INavPageItemProps> = ({ title, path }) => {
+const NavItem: FC<INavPageItemProps> = ({ title, path, onClick }) => {
 	const { handleMobileNavMode } = useContext(HeaderContext);
 
+	const handleLinkClick = () => {
+		onClick();
+		handleMobileNavMode(false);
+	};
+
 	return (
-		<Link
-			className={s.container}
-			onClick={() => handleMobileNavMode(false)}
-			href={path}
-		>
-			{title}
-		</Link>
+		<li>
+			<Link className={s.container} onClick={handleLinkClick} href={path}>
+				{title}
+			</Link>
+		</li>
 	);
 };
 

@@ -2,4 +2,10 @@
   @include flex-align(center);
   font-size: 14px;
   font-weight: 500;
+  height: 100%;
+
+  @include media-mobile {
+    width: fit-content;
+    padding-left: 20px;
+  }
 }

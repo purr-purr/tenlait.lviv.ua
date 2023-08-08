@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import { HeaderContext } from '@modules/layout/context/HeaderContext';
 import NavGroup from '@modules/nav/components/NavGroup';
@@ -8,13 +8,18 @@ import cn from 'classnames';
 import { useMediaQuery } from '@modules/common/hooks';
 
 import { MOBILE_BREAKPOINT } from '@utils/const';
-import { NAVIGATION, type INavigation } from '@utils/data';
+import { appNavigation } from '@utils/data';
+import type { IAppNavigation } from '@utils/types';
 
 import s from './Nav.module.scss';
 
 const Nav = () => {
 	const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
 	const { isMobileNavMode, handleMobileNavMode } = useContext(HeaderContext);
+
+	const [openDropdownIndex, setOpenDropdownIndex] = useState<number | boolean>(
+		false,
+	);
 
 	useEffect(() => {
 		const element = document.querySelector('html');
@@ -29,16 +34,35 @@ const Nav = () => {
 		}
 	}, [isMobileNavMode, isMobile]);
 
+	const toggleDropdown = (index: number) => {
+		setOpenDropdownIndex(openDropdownIndex === index ? false : index);
+	};
+
+	const toggleIsOpen = (index: number | boolean) => {
+		return typeof index === 'boolean' ? index : index === openDropdownIndex;
+	};
+
 	return (
-		<nav className={cn(s.container, isMobileNavMode && s.active)}>
-			{NAVIGATION.map((item: INavigation) =>
+		<ul className={cn(s.container, isMobileNavMode && s.active)}>
+			{appNavigation.map((item: IAppNavigation, index) =>
 				item.path ? (
-					<NavItem key={item.title} title={item.title} path={item.path} />
+					<NavItem
+						onClick={() => toggleDropdown(index)}
+						key={item.title}
+						title={item.title}
+						path={item.path}
+					/>
 				) : item.group ? (
-					<NavGroup key={item.title} title={item.title} group={item.group} />
+					<NavGroup
+						key={item.title}
+						title={item.title}
+						group={item.group}
+						isOpen={toggleIsOpen(index)}
+						onClick={() => toggleDropdown(index)}
+					/>
 				) : null,
 			)}
-		</nav>
+		</ul>
 	);
 };
 

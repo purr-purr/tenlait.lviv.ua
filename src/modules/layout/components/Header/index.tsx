@@ -1,4 +1,5 @@
 import Logo from '@modules/common/components/Logo';
+import { HeaderContextWrapper } from '@modules/layout/context/HeaderContext';
 import Nav from '@modules/nav/components/Nav';
 import NavButton from '@modules/nav/components/NavBurgerButton';
 
@@ -14,8 +15,10 @@ const Header = () => {
 	return (
 		<header className={s.container}>
 			<Logo />
-			<Nav />
-			{isMobile && <NavButton />}
+			<HeaderContextWrapper>
+				<Nav />
+				{isMobile && <NavButton />}
+			</HeaderContextWrapper>
 		</header>
 	);
 };

@@ -8,9 +8,18 @@
   margin-right: auto;
   padding-left: 60px;
   padding-right: 60px;
+
+  @include media-mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .content {
   margin-top: 100px;
   flex-grow: 1;
+
+  @include media-mobile {
+    margin-top: 48px;
+  }
 }

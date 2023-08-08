@@ -4,6 +4,11 @@
   padding-top: 24px;
   padding-bottom: 24px;
 
+  @include media-mobile {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
   &:after {
     content: '';
     position: absolute;
@@ -13,9 +18,17 @@
     height: 1px;
     background-color: #fff;
   }
+}
 
-  p {
+.signature {
+  @include flex-justify-align(space-between, center);
+  margin-top: 24px;
+
+  @include media-mobile {
+    margin-top: 16px;
+  }
+
+  p, a {
     font-size: 12px;
-    margin-top: 24px;
   }
 }

@@ -1,3 +1,4 @@
-import Page404 from '@modules/page404/components/Page404';
-
+const Page404 = () => {
+	return <h1>404 - Page not found</h1>;
+};
 export default Page404;

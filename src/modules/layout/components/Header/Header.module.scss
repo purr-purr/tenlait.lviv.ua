@@ -3,6 +3,10 @@
   min-height: 64px;
   position: relative;
 
+  @include media-mobile {
+    min-height: 49px;
+  }
+
   &:after {
     content: '';
     position: absolute;
