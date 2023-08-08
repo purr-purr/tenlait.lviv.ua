@@ -10,7 +10,3 @@ export interface IDocsList {
 	title: string;
 	path: string;
 }
-
-export interface IMessages {
-	[key: string]: string;
-}

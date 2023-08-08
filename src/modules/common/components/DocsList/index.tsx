@@ -4,7 +4,6 @@ import Image from 'next/image';
 import cn from 'classnames';
 
 import { getDocsPath } from '@utils/formatters';
-import messages from '@utils/messages';
 import type { IDocsList } from '@utils/types';
 
 import DOWNLOAD_ICON from '@public/assets/download-icon.svg';
@@ -30,9 +29,7 @@ const DocsList: FC<{
 								href={getResourcePath(item.path)}
 								target="_blank"
 							>
-								{type === 'doc' && (
-									<Image src={DOWNLOAD_ICON} alt={messages.DOWNLOAD} />
-								)}
+								{type === 'doc' && <Image src={DOWNLOAD_ICON} alt="Download" />}
 								{item.title}
 							</a>
 						</li>

@@ -6,7 +6,6 @@ import {
 	APP_LINK,
 	COMPANY_NAME,
 } from '@utils/const';
-import messages from '@utils/messages';
 
 import FAVICON from '@public/assets/favicon.ico';
 import LOGO from '@public/assets/logo.svg';
@@ -17,7 +16,12 @@ const Meta: FC<{
 	const manifestPath: string = '/assets/manifest.webmanifest';
 	const metaTitle: string = title ? `${title} ${COMPANY_NAME}` : COMPANY_NAME;
 	const metaDesc: string =
-		COMPANY_NAME + messages.OUR_TEAM_OF_HIGHLY_QUALIFIED_EXPERTS;
+		COMPANY_NAME +
+		' - команда висококваліфікованих експертів, які з метою' +
+		'забезпечити ваш бізнес та побутові потреби, працюють над постійним' +
+		'розвитком та оптимізацією послуг з постачання електроенергії. Наші' +
+		'експерти готові допомогти вам у виборі оптимальних енергетичних рішень та' +
+		'впровадженні енергоефективних технологій.';
 
 	return (
 		<Head>

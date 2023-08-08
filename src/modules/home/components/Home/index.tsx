@@ -18,7 +18,6 @@ import {
 	COMPANY_SCHEDULE,
 	MOBILE_BREAKPOINT,
 } from '@utils/const';
-import messages from '@utils/messages';
 
 import s from './Home.module.scss';
 
@@ -28,11 +27,14 @@ const Home = () => {
 		<>
 			<article className={s.intro}>
 				<h1 className={s.mainTitle}>
-					<span className={s.primaryText}>{messages.INNOVATION}</span>
-					{messages.IN_EVERY_VOLT_IS_THE_DRIVING_FORCE_BEHIND_YOUR_PROGRESS}
+					<span className={s.primaryText}>Інновації </span>у кожному вольті - рушійна
+					сила вашого прогресу
 				</h1>
 
-				<p>{messages.WE_OFFER_INNOVATIVE_SOLUTIONS}</p>
+				<p>
+					Ми пропонуємо інноваційні рішення та аналіз ринку, щоб ви могли зробити
+					вигідний вибір для вашого бізнесу чи побутових потреб.
+				</p>
 			</article>
 
 			<div className={s.poster}>
@@ -40,23 +42,34 @@ const Home = () => {
 			</div>
 
 			<article className={s.aboutUs}>
-				<h2 className={s.subTitle}>{messages.ABOUT_US}</h2>
+				<h2 className={s.subTitle}>Про нас</h2>
 				<h3 className={s.blockTitle}>
-					<span className={s.primaryText}>{messages.WE_CARE}</span>
-					{messages.ABOUT_YOUR_COMFORT_AND_SAVING_RESOURCES}
+					<span className={s.primaryText}>Ми дбаємо </span>
+					про ваш комфорт та економію ресурсів
 				</h3>
 
 				<ul className={s[`aboutUs-desc`]}>
-					<li>{COMPANY_NAME + messages.OUR_TEAM_OF_HIGHLY_QUALIFIED_EXPERTS}</li>
-					<li>{messages.OUR_TEAM_IS_COMMITTED_TO_HIGH_QUALITY_SERVICE}</li>
+					<li>
+						{COMPANY_NAME} - команда висококваліфікованих експертів, які з метою
+						забезпечити ваш бізнес та побутові потреби, працюють над постійним
+						розвитком та оптимізацією послуг з постачання електроенергії. Наші
+						експерти готові допомогти вам у виборі оптимальних енергетичних рішень та
+						впровадженні енергоефективних технологій.
+					</li>
+					<li>
+						Наша команда прагне до високої якості обслуговування та постійного
+						розвитку, щоб задовольнити ваші потреби навіть у найскладніших умовах. Ми
+						дбаємо про ваш комфорт та економію ресурсів, тому оберіть нас - ваш
+						надійний партнер у світі енергетики.
+					</li>
 				</ul>
 			</article>
 
 			<article className={s.contacts} id="contacts">
-				<h2 className={s.subTitle}>{messages.CONTACTS}</h2>
+				<h2 className={s.subTitle}>Контакти</h2>
 				<h3 className={s.blockTitle}>
-					<span className={s.primaryText}>{messages.CONTACT}</span>
-					{messages.POINT_OF_ENERGY_WE_ARE_ALWAYS_THERE}
+					<span className={s.primaryText}>Контактна </span>
+					точка енергії - ми завжди поруч!
 				</h3>
 
 				<ul className={s[`contacts-list`]}>
