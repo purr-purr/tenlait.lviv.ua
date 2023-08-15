@@ -5,7 +5,7 @@ export const APP_AUTHOR_WEBSITE: string = `https://${APP_AUTHOR_SIGNATURE}/`;
 export const APP_AUTHOR_FULL_SIGNATURE: string = `${APP_AUTHOR} => ${APP_AUTHOR_WEBSITE} => shaposhnikov.web@gmail.com`;
 export const APP_LINK: string = 'https://tenlait.lviv.ua/';
 export const COMPANY_NAME: string = 'ТОВ “Тенлайт”';
-export const COMPANY_EDRPOU: string = 'код ЄДРПОУ 2984315227';
+export const COMPANY_EDRPOU: string = 'код ЄДРПОУ 45057921';
 export const COMPANY_PHONE: string = '+380668775417';
 export const COMPANY_EMAIL: string = 'tenlait-tov@gmail.com';
 export const COMPANY_SCHEDULE: string =
