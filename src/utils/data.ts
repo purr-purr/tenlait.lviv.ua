@@ -1,28 +1,28 @@
-import type { IAppNavigation, IDocsList } from '@utils/types';
+import type {IAppNavigation, IDocsList} from '@utils/types';
 
 export const appNavigation: IAppNavigation[] = [
-	{ title: 'Головна', path: '/' },
-	{ title: 'Контакти', path: '/#contacts' },
+	{title: 'Головна', path: '/'},
+	{title: 'Контакти', path: '/#contacts'},
 	{
 		title: 'Електроенергія',
 		group: [
-			{ title: 'Договори', path: '/electricity-contracts' },
-			{ title: 'Врегулювання спорів', path: '/electricity-dispute-resolution' },
-			{ title: 'Нормативна база', path: '/electricity-laws' },
+			{title: 'Договори', path: '/electricity-contracts'},
+			{title: 'Врегулювання спорів', path: '/electricity-dispute-resolution'},
+			{title: 'Нормативна база', path: '/electricity-laws'},
 			{
 				title: 'Про вплив на довкілля',
 				path: '/electricity-environmental-impact',
 			},
-			{ title: 'Інші документи', path: '/other-docs' },
+			{title: 'Інші документи', path: '/other-docs'},
 		],
 	},
 	{
 		title: 'Природний газ',
 		group: [
-			{ title: 'Договори', path: '/gas-contracts' },
-			{ title: 'Врегулювання спорів', path: '/gas-dispute-resolution' },
-			{ title: 'Загальні умови', path: '/gas-general-conditions' },
-			{ title: 'Нормативна база', path: '/gas-laws' },
+			{title: 'Договори', path: '/gas-contracts'},
+			{title: 'Врегулювання спорів', path: '/gas-dispute-resolution'},
+			{title: 'Загальні умови', path: '/gas-general-conditions'},
+			{title: 'Нормативна база', path: '/gas-laws'},
 		],
 	},
 ];
@@ -34,7 +34,7 @@ export const electricityContracts: IDocsList[] = [
 	},
 	{
 		title: 'Публічний договір про постачання',
-		path: 'Публічний_договір.docx',
+		path: 'Публічний_договір_електро.docx',
 	},
 ];
 
@@ -143,7 +143,7 @@ export const gasContracts = [
 
 export const gasDisputeResolution = [
 	{
-		title: 'Врегулювання спрорів',
+		title: 'Врегулювання спорів',
 		path: 'Врегулування_спорів_газ.docx',
 	},
 ];
