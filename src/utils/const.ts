@@ -8,6 +8,7 @@ export const COMPANY_NAME: string = 'ТОВ “Тенлайт”';
 export const COMPANY_EDRPOU: string = 'код ЄДРПОУ 45057921';
 export const COMPANY_PHONE: string = '+380668775417';
 export const COMPANY_EMAIL: string = 'tenlait-tov@ukr.net';
+export const COMPANY_EMAIL_SECOND: string = 'info@tenlait.lviv.ua';
 export const COMPANY_SCHEDULE: string =
 	'Робочі дні: понелілок – п’ятниця з 9:00 до 18:00 год. ' +
 	'Bихідні: субота - неділя';
